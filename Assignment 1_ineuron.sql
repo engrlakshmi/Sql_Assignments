@@ -22,6 +22,10 @@ INSERT INTO Worker
 		(008, 'Geethika', 'Chauhan', 90000, '14-04-22 09.00.00', 'Admin');
       Select FIRST_NAME AS WORKER_NAME from Worker;
       # 2. Write an SQL query to fetch unique values of DEPARTMENT from Worker table#
+      Select distinct DEPARTMENT from Worker;
+      #3. Last five record from the table#
+      Select * from Worker where WORKER_ID = (SELECT max(WORKER_ID) from Worker);
+      
       
       
         
